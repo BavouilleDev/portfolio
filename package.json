@@ -1,0 +1,13 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Mon portfolio trop trop bien",
+  "main": "email.js",
+  "scripts": {
+    "start": "node email.js"
+  },
+  "keywords": [],
+  "author": "Baudouin Grolet",
+  "license": "MIT",
+  "dependencies": {}
+}
