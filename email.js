@@ -1,7 +1,7 @@
 (function() {
     // https://dashboard.emailjs.com/admin/account
     emailjs.init({
-      publicKey: "process.env.API_KEY_PLACEHOLDER",
+      publicKey: "RI2BpBFfXpTfSCDmY",
     });
 })();
 window.onload = function() {
