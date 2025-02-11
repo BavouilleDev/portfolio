@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BavouilleDev/portfolio2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BavouilleDev/portfolio2/issues"
+  },
+  "homepage": "https://github.com/BavouilleDev/portfolio2#readme",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "husky": "^4.3.8",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^3.4.17"
+  }
+}
