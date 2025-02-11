@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Baudouin Grolet | dev Freelance</title>
+    <link href="../output.css" rel="stylesheet">
+    <link rel="icon" href="../elements/img/logo.png" type="image/x-icon">
+    <script src="../index.js"></script>
+</head>
+
+<body class="lg:w-11/12 sm:w-screen mx-auto my-14 text-center">
+    <div class="header flex flex-wrap w-3/4 lg:w-1/4 mx-auto">
+        <a href="../index.html" class="text-5xl text-gray-300 flex-1 lg:text-base hover:text-white">Accueil</a>
+        <a href="../games.html" class="text-5xl text-gray-300 flex-1 lg:text-base hover:text-white">Mes jeux</a>
+    </div>
+      
+
+    <div class="slide-wrapper">
+        <div class="slide-in flex sm:flex-col lg:flex-row flex-wrap  mt-96 w-5/6 mx-auto">
+            <div class="flex-1 flex flex-col justify-start">
+                <p class="text-8xl lg:text-4xl font-bold gradient-text">Ninja Frog II</p>
+                <p class="text-white lg:text-lg sm:text-4xl text-justify w-full px-4 mt-4">Ninja Frog II vous plonge dans la peau d’une grenouille intrépide, explorant un monde mystérieux. Inspiré par le célèbre jeu OnlyUp, chaque erreur vous fera dégringoler jusqu’au début du niveau. Parviendrez-vous à atteindre le sommet de la montagne ?</p>
+                <p class="text-white lg:text-lg sm:text-4xl text-justify w-full px-4 mt-4">CE JEU EST ACTUELLEMENT EN DÉVELOPPEMENT ! Rejoignez le discord pour être notifié à la sortie de la version finale !</p>
+                <a href="#screens" class="text-5xl text-gray-300 flex-1 lg:text-base hover:text-white mt-5">Voir des images</a>
+                <div class="flex flex-wrap justify-center gap-4 mt-5">
+                    <p class="game-tag text-3xl lg:text-base">Plateformes</p>
+                    <p class="game-tag text-3xl lg:text-base">2D</p>
+                    <p class="game-tag text-3xl lg:text-base">Solo</p>
+                    <p class="game-tag text-3xl lg:text-base">Gratuit</p>
+                    <p class="game-tag text-3xl lg:text-base">Jeu d'arcade</p>
+                </div>
+            </div>
+            <div class="flex-1 flex flex-col items-center justify-center">
+                <button type="button" class="button-nope text-5xl text-gray-300 flex-1 lg:text-base hover:text-white mt-5" popovertarget="myPopover" popovertargetaction="show">
+                    <div class="overflow-hidden rounded-2xl">
+                        <img src="../elements/img/ninja-frog-ii/logo.png" class="sm:w-64 lg:w-48 h-auto rounded-2xl transition-transform duration-300 hover:scale-110">
+                    </div>
+                    <p class="mt-5">Télécharger</p>
+                </button>
+            </div>
+            
+        </div>     
+    </div>
+
+    <dialog id="myPopover" popover class="popover-content">
+        <button type="button" popovertarget="myPopover" popovertargetaction="hide" class="visible mb-5 lg:hidden lg:mb-0">Fermer</button>
+        <p class="text-white sm:text-6xl lg:text-3xl gradient-text">Avant de procéder au téléchargement ...</p>
+        <p class="text-white sm:text-3xl lg:text-base mt-12">Comme vous le savez, tous mes jeux sont entièrement gratuits. Si vous souhaitez m'aider à les maintenir accessibles à tous, vous pouvez envisager de faire un don sur Tipeee. Si un don financier n'est pas possible, votre soutien est tout de même précieux ! Partagez simplement mon site avec vos amis et suivez-moi sur mes réseaux sociaux. Chaque geste compte et contribue à la continuité de mes projets !</p>
+        <a href="https://fr.tipeee.com/daubouin" target="_blank" class="button mt-12 inline-block">Me soutenir sur Tipeee</a>
+        <p class="text-white sm:text-3xl lg:text-base mt-12">Si, malgré tout, vous n'êtes pas en mesure de m'apporter un soutien financier, vous pouvez toujours m'aider de manière significative en me suivant sur YouTube ou en rejoignant mon serveur Discord ! Votre soutien, quelle que soit sa forme, compte beaucoup pour moi !</p>
+        <a href="https://discord.gg/qzsNCamvSJ" target="_blank" class="button mt-12 inline-block">Rejoindre le discord</a>
+        <div class="flex flex-wrap gap-10 justify-center mt-24">
+            <a href="https://drive.google.com/file/d/1apj3Gd3Cqw1kjSWKEqdRuEIZren_W0zY/view?usp=sharing" download class="text-5xl text-gray-300 lg:text-base hover:text-white sm:invisible lg:visible">Télécharger (.EXE pour Windows) [BETA]</a>
+            <a href="https://drive.google.com/file/d/11n1TuwKVpD75jWNCMseutMBQ_lQBFqJa/view?usp=sharing" download class="text-5xl text-gray-300 lg:text-base hover:text-white">Télécharger (.APK pour Android) [BETA]</a>
+        </div>
+    </dialog>
+    
+
+    <div id="support" class="slide-wrapper">
+        <div class="slide-in flex flex-col justify-center items-center gap-28 mt-40">
+            <div class="text-center">
+            <p class="text-8xl lg:text-4xl font-bold gradient-text">Me supporter</p>
+        </div>
+        <p class="text-white lg:text-lg sm:text-4xl text-justify items-center lg:w-5/12 sm:w-11/12">Mes jeux, étant gratuits, génèrent actuellement très peu de revenus. Je vous remercie d’avance pour tout soutien que vous pourriez m’apporter, que ce soit en me suivant sur YouTube et Twitch, ou par des dons. Partager mon site et mes jeux auprès de vos connaissances serait également un immense coup de pouce, et je vous en serais très reconnaissant.</p>
+        <div class="flex flex-wrap my-2 gap-4">
+            <a href="https://discord.gg/qzsNCamvSJ" class="button">Rejoindre mon discord</a>
+            <a href="" class="button">Me faire un don</a>
+        </div>
+    </div>
+
+    <div id="screens" class="slide-wrapper">
+        <div class="slide-in flex flex-col justify-center items-center gap-28 mt-40">
+            <div class="text-center">
+                <p class="text-8xl lg:text-4xl font-bold gradient-text">Images de Ninja Frog II</p>
+            </div>
+    
+            <div class="flex flex-wrap justify-center gap-8">
+                <img src="../elements/img/ninja-frog-ii/1.png" class="w-4/5 lg:w-2/5 h-auto rounded-xl">
+                <img src="../elements/img/ninja-frog-ii/2.png" class="w-4/5 lg:w-2/5 h-auto rounded-xl">
+                <img src="../elements/img/ninja-frog-ii/3.png" class="w-4/5 lg:w-2/5 h-auto rounded-xl">
+                <img src="../elements/img/ninja-frog-ii/4.png" class="w-4/5 lg:w-2/5 h-auto rounded-xl">
+                <img src="../elements/img/ninja-frog-ii/5.png" class="w-4/5 lg:w-2/5 h-auto rounded-xl">
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="slide-wrapper">
+        <div class="slide-in flex flex-wrap justify-center p-4 gap-20 my-40">
+            <a href="../games.html#games">
+                <div class="lg:w-96 lg:h-96 sm:w-[48rem] sm:h-[48rem] rounded-xl bg-[#2f4550] overflow-hidden group sm:mx-auto lg:mx-0 sm:mt-10 lg:mt-0">
+                    <img src="../elements/img/background.jpg" alt="Image" class="w-full h-3/5 overflow-hidden object-cover rounded-t-xl transition-transform duration-300 group-hover:scale-110">
+                    <p class="text-white text-7xl lg:text-3xl lg:mt-5 sm:mt-16">Et pleins d'autres jeux en projet !</p>
+                </div>
+            </a>
+        </div>         
+    </div>
+
+
+</div>
+
+
+<div id="footer" class="mb-0 w-full py-4 text-center">
+    <p class="text-white lg:text-base sm:text-3xl">&copy; 2024 - Baudouin Grolet - tous droits réservés.</p>
+</div>
+
+</body>
+
+</html>
