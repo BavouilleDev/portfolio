@@ -1,3 +1,106 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'roboto-regular';
+    src: url(elements/font/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'roboto-bold';
+    src: url(elements/font/Roboto-bold.ttf);
+}
+
+@font-face {
+    font-family: 'roboto-black';
+    src: url(elements/font/Roboto-black.ttf);
+}
+
+@font-face {
+    font-family: 'roboto-italic';
+    src: url(elements/font/Roboto-Italic.ttf);
+}
+
+p,
+input,
+button {
+    font-family: 'roboto-regular';
+}
+
+p .font-bold {
+    font-family: 'roboto-bold';
+}
+
+p .font-black {
+    font-family: 'roboto-black';
+}
+
+p .font-italic {
+    font-family: 'roboto-italic';
+}
+
+.flex-2 {
+    flex: 2 1 0;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    background: linear-gradient(45deg, #2f4550, #000a05);
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #b8dbd9, #f4f4f9);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.gradient-text::selection {
+    background-color: transparent;
+}
+
+::selection {
+    background-color: #2f4550;
+}
+
+/* Définir l'animation pour faire glisser l'élément depuis la droite */
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+  
+/* Style de l'élément initialement hors écran */
+.slide-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+  
+.slide-in {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease; /* Ajuster la durée ici */
+}
+  
+/* Style de l'élément visible après le défilement */
+.slide-in.visible {
+    animation: slideInFromRight 1s ease forwards; /* Ajuster la durée ici */
+}

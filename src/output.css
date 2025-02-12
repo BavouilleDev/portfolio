@@ -553,3 +553,267 @@ video {
 [hidden]:where(:not([hidden="until-found"])) {
   display: none;
 }
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-14 {
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-3\/4 {
+  width: 75%;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-28 {
+  gap: 7rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+@font-face {
+  font-family: 'roboto-regular';
+
+  src: url(elements/font/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'roboto-bold';
+
+  src: url(elements/font/Roboto-bold.ttf);
+}
+
+@font-face {
+  font-family: 'roboto-black';
+
+  src: url(elements/font/Roboto-black.ttf);
+}
+
+@font-face {
+  font-family: 'roboto-italic';
+
+  src: url(elements/font/Roboto-Italic.ttf);
+}
+
+p,
+input,
+button {
+  font-family: 'roboto-regular';
+}
+
+p .font-bold {
+  font-family: 'roboto-bold';
+}
+
+p .font-black {
+  font-family: 'roboto-black';
+}
+
+p .font-italic {
+  font-family: 'roboto-italic';
+}
+
+.flex-2 {
+  flex: 2 1 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(45deg, #2f4550, #000a05);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #b8dbd9, #f4f4f9);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-text::-moz-selection {
+  background-color: transparent;
+}
+
+.gradient-text::selection {
+  background-color: transparent;
+}
+
+::-moz-selection {
+  background-color: #2f4550;
+}
+
+::selection {
+  background-color: #2f4550;
+}
+
+/* Définir l'animation pour faire glisser l'élément depuis la droite */
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Style de l'élément initialement hors écran */
+
+.slide-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-in {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+  /* Ajuster la durée ici */
+}
+
+/* Style de l'élément visible après le défilement */
+
+.slide-in.visible {
+  animation: slideInFromRight 1s ease forwards;
+  /* Ajuster la durée ici */
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+@media (min-width: 640px) {
+  .sm\:w-11\/12 {
+    width: 91.666667%;
+  }
+
+  .sm\:w-screen {
+    width: 100vw;
+  }
+
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-1\/4 {
+    width: 25%;
+  }
+
+  .lg\:w-11\/12 {
+    width: 91.666667%;
+  }
+
+  .lg\:w-5\/12 {
+    width: 41.666667%;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
