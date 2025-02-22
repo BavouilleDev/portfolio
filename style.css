@@ -311,12 +311,23 @@ body {
   border: none;
   border-radius: 8px;
   padding: 20px;
-  background-color: #7A5DD0;
+  background-color: #000000;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
+.big-popover-content {
+  width: 80vw;
+  height: 90vh;
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #000000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+
 @media (max-width: 1023px) {
-  .popover-content {
+  .popover-content, .big-popover-content {
     width: 90vw;
     /* 90% de la largeur de l'écran */
     height: 90vh;
@@ -324,7 +335,7 @@ body {
     border: none;
     border-radius: 8px;
     padding: 20px;
-    background-color: #7A5DD0;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #000000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   }
 }
