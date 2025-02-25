@@ -283,7 +283,7 @@ button:active::before {
 }
 
 /* Media Query pour les petits écrans */
-@media (max-width: 1023px) {
+@media (max-width: 480px) {
   .card {
     width: 100%; /* La largeur de la carte prend toute la largeur de l'écran */
     height: calc(100vw * (254 / 190)); /* Hauteur proportionnelle à la largeur */
