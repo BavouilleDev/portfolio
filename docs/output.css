@@ -558,6 +558,14 @@ video {
   visibility: visible;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
+.fixed {
+  position: fixed;
+}
+
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -600,8 +608,16 @@ video {
   margin-bottom: 2rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-12 {
   margin-top: 3rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .mt-20 {
@@ -636,20 +652,12 @@ video {
   margin-top: 24rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .inline-block {
   display: inline-block;
 }
 
 .flex {
   display: flex;
-}
-
-.grid {
-  display: grid;
 }
 
 .hidden {
@@ -676,10 +684,6 @@ video {
   width: 91.666667%;
 }
 
-.w-3\/4 {
-  width: 75%;
-}
-
 .w-4\/5 {
   width: 80%;
 }
@@ -690,6 +694,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .flex-1 {
@@ -758,10 +766,6 @@ video {
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-5 {
-  gap: 1.25rem;
 }
 
 .overflow-hidden {
@@ -906,9 +910,18 @@ video {
   font-weight: 600;
 }
 
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
 .text-gray-300 {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
 }
 
 .text-purple-500 {
@@ -919,6 +932,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.line-through {
+  text-decoration-line: line-through;
 }
 
 .transition-transform {
@@ -987,18 +1004,6 @@ body {
   background: linear-gradient(45deg, #2f4550, #000a05);
 }
 
-@media (max-width: 1023px) {
-  .button, button {
-    font-size: 2.5rem;
-    padding: 1rem 2rem;
-    margin-top: 50px;
-  }
-
-  input {
-    height: 5rem;
-  }
-}
-
 .gradient-text {
   background: linear-gradient(to right, #00dbde, #fc00ff);
   -webkit-background-clip: text;
@@ -1028,6 +1033,14 @@ body {
   height: 22px;
   margin-right: 20px;
   color: white;
+}
+
+.ico::-moz-selection {
+  background-color: transparent;
+}
+
+.ico::selection {
+  background-color: transparent;
 }
 
 @media (max-width: 1023px) {
@@ -1072,12 +1085,10 @@ body {
   /* Ajuster la durée ici */
 }
 
-.button {
+.button, button {
   position: relative;
   width: 160px;
-  /* Augmenté pour rendre le bouton plus large */
   height: 50px;
-  /* Augmenté pour donner plus de hauteur */
   background-color: #000;
   display: flex;
   align-items: center;
@@ -1086,36 +1097,30 @@ body {
   justify-content: center;
   border: none;
   padding: 16px;
-  /* Augmenté pour un meilleur espacement */
   gap: 16px;
-  /* Augmenté pour espacer le contenu */
   border-radius: 10px;
-  /* Augmenté pour des coins plus arrondis */
   cursor: pointer;
 }
 
-.button::before {
+.button::before,
+button::before {
   content: '';
   position: absolute;
   inset: 0;
   left: -6px;
-  /* Ajusté pour s'adapter à la taille plus grande */
   top: -2px;
-  /* Ajusté pour s'adapter à la taille plus grande */
   margin: auto;
   width: 168px;
-  /* Ajusté pour correspondre au bouton plus grand */
   height: 58px;
-  /* Ajusté pour correspondre au bouton plus grand */
   border-radius: 12px;
-  /* Ajusté pour correspondre au bouton plus grand */
   background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
   z-index: -10;
   pointer-events: none;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.button::after {
+.button::after,
+button::after {
   content: "";
   z-index: -1;
   position: absolute;
@@ -1123,20 +1128,44 @@ body {
   background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
   transform: translate3d(0, 0, 0) scale(0.95);
   filter: blur(25px);
-  /* Ajusté pour un effet plus doux */
 }
 
-.button:hover::after {
+.button:hover::after,
+button:hover::after {
   filter: blur(35px);
-  /* Ajusté pour correspondre à la taille du bouton */
 }
 
-.button:hover::before {
+.button:hover::before,
+button:hover::before {
   transform: rotate(-180deg);
 }
 
-.button:active::before {
+.button:active::before,
+button:active::before {
   scale: 0.7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1023px) {
+  .button, button {
+    font-size: 2.5rem;
+    width: 100%;
+    /* Largeur adaptative */
+    height: auto;
+    padding: 2rem;
+  }
+
+  .button::before,
+  button::before {
+    width: calc(100% + 8px);
+    /* S'adapte à la largeur du bouton */
+    height: calc(100% + 8px);
+  }
+
+  input {
+    height: 5rem;
+  }
 }
 
 #background-video {
@@ -1218,7 +1247,7 @@ body {
 
 /* Media Query pour les petits écrans */
 
-@media (max-width: 480px) {
+@media (max-width: 1023px) {
   .card {
     width: 100%;
     /* La largeur de la carte prend toute la largeur de l'écran */
@@ -1317,6 +1346,10 @@ body {
 }
 
 @media (min-width: 640px) {
+  .sm\:visible {
+    visibility: visible;
+  }
+
   .sm\:invisible {
     visibility: hidden;
   }
@@ -1381,11 +1414,6 @@ body {
     line-height: 1;
   }
 
-  .sm\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
-
   .sm\:placeholder\:text-3xl::-moz-placeholder {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -1400,6 +1428,10 @@ body {
 @media (min-width: 1024px) {
   .lg\:visible {
     visibility: visible;
+  }
+
+  .lg\:invisible {
+    visibility: hidden;
   }
 
   .lg\:mx-0 {
